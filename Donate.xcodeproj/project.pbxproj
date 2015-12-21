@@ -31,6 +31,7 @@
 		4DC102F6E2A832931E348097 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5243FD1FAA816CDB9094F587 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D7264C08CE7D6788306D5B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DE9D14B01C288CF4008A44A5 /* Donate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Donate-Bridging-Header.h"; sourceTree = "<group>"; };
 		E7240E531B2461DF00604F47 /* Donate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7240E571B2461DF00604F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7240E581B2461DF00604F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 				E7240E641B2461DF00604F47 /* LaunchScreen.xib */,
 				E7240E5A1B2461DF00604F47 /* Donate.xcdatamodeld */,
 				E7240E561B2461DF00604F47 /* Supporting Files */,
+				DE9D14B01C288CF4008A44A5 /* Donate-Bridging-Header.h */,
 			);
 			path = Donate;
 			sourceTree = "<group>";
@@ -422,6 +424,7 @@
 			baseConfigurationReference = A7D7264C08CE7D6788306D5B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Donate/Info.plist;
@@ -429,7 +432,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vento.Donate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Donate/Donate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -438,6 +442,7 @@
 			baseConfigurationReference = 4DC102F6E2A832931E348097 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Donate/Info.plist;
@@ -445,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vento.Donate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Donate/Donate-Bridging-Header.h";
 			};
 			name = Release;
 		};

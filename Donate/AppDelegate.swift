@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        // For now, we will use just the test keys so you can test our transactions without using a real credit card.
+        Stripe.setDefaultPublishableKey("pk_test_IFXRXvpWJwqG9PAm4S0tO2A4 ")
         
         return true
     }
@@ -103,11 +106,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     // MARK: - Core Data Saving support
-
+    
     func saveContext () {
         if let moc = self.managedObjectContext {
             
-            
+            // https://www.hackingwithswift.com/new-syntax-swift-2-error-handling-try-catch
             
             do {
                 if moc.hasChanges {
