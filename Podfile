@@ -12,5 +12,5 @@ target 'DonateTests' do
 end
 
 pod 'Stripe'
-pod 'AFNetworking'
+pod 'Alamofire'
 

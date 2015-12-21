@@ -84,10 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-Donate/AFNetworking.framework"
+  install_framework "Pods-Donate/Alamofire.framework"
   install_framework "Pods-Donate/Stripe.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-Donate/AFNetworking.framework"
+  install_framework "Pods-Donate/Alamofire.framework"
   install_framework "Pods-Donate/Stripe.framework"
 fi

@@ -8,6 +8,7 @@
 
 import UIKit
 import Stripe
+import Alamofire
 
 class ViewController: UITableViewController,UITextFieldDelegate {
 
@@ -68,11 +69,21 @@ class ViewController: UITableViewController,UITextFieldDelegate {
             
             
             // TODO: - post StripeToken!!!!
-            //self.postStripeToken(token!)
+            self.postStripeToken(token!)
             
         }
     
     }
+    
+    
+    
+    func postStripeToken(token: STPToken) {
+        
+        
+        
+        
+    }
+    
     
     
     /*
