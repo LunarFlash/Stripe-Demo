@@ -2,24 +2,37 @@
 //  ViewController.swift
 //  Donate
 //
-//  Created by Ziad on 6/7/15.
+//  Created by Ziad TAMIM on 6/7/15.
 //  Copyright (c) 2015 TAMIN LAB. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController,UITextFieldDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var cardNumberTextField: UITextField!
+    @IBOutlet weak var expireDateTextField: UITextField!
+    @IBOutlet weak var cvcTextField: UITextField!
+    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    @IBOutlet var textFields: [UITextField]!
+    
+    // MARK: - Text field delegate 
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        return true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    // MARK: Actions
+    
+    @IBAction func donate(sender: AnyObject) {
+        
+    
     }
-
 
 }
 
